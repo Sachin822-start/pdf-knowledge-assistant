@@ -1,0 +1,40 @@
+
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local models and vector database
+models/
+vectorstore/
+*.pt
+*.bin
+*.safetensors
+
+# Private and development PDF datasets
+data/pdfs/
+data/processed/ingestion_registry.json
+
+# Logs and temporary files
+logs/
+*.log
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated processing artifacts
+data/processed/chunks.*
+data/processed/embeddings.*
+data/processed/ingestion_registry*.json

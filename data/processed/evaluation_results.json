@@ -1,0 +1,105 @@
+{
+    "summary": {
+        "average_precision_at_5": 0.5,
+        "average_recall_at_5": 0.8333333333333333,
+        "average_mrr": 0.75,
+        "average_citation_reference_accuracy": 0.5,
+        "average_retrieval_seconds": 0.4266018499620259,
+        "average_reranking_seconds": 5.78058485002839,
+        "average_generation_seconds": 30.79429560000426,
+        "average_total_seconds": 37.00163944999804,
+        "p95_latency_seconds": 38.07033079996472,
+        "questions_evaluated": 2
+    },
+    "individual_results": [
+        {
+            "question": "What is the difference between a public and private subnet?",
+            "answer": "A public subnet is designed to allow unsolicited inbound internet traffic, whereas a private subnet is intended to prevent unsolicited inbound internet traffic. A public subnet commonly has a default route to an internet gateway, while a private subnet may use a NAT gateway for controlled outbound connectivity. The key difference lies in the security and operational considerations of each subnet type.",
+            "retrieved_sources": [
+                {
+                    "filename": "sample.pdf",
+                    "page_number": 43,
+                    "rerank_score": 0.9973804354667664,
+                    "text": "Synthetic Cloud Infrastructure Handbook\n\nScanned page demonstration - Page 43\n\nRouting\n\nRoute tables determine where packets travel. A public subnet commonly has a\ndefault route to an internet gateway, while a private subnet may use a NAT\n\ngateway for controlled outbound connectivity.\n\nOCR test: A private subnet should not accept unsolicited inbound internet\n\ntraffic.\nA NAT gateway can allow private instances to initiate outbound connections.\nPreserve the original PDF filename and one-based page number in metadata.\n\nThis synthetic content is created solely for software testing."
+                },
+                {
+                    "filename": "sample.pdf",
+                    "page_number": 33,
+                    "rerank_score": 0.9947671890258789,
+                    "text": "Synthetic Cloud Infrastructure and Operations Handbook\nChapter: Routing\nPage reference: 33.\nRoute tables determine where packets travel. A public subnet commonly has a default route to an internet gateway, while a private\nsubnet may use a NAT gateway for controlled outbound connectivity.\nOperational guidance: document assumptions, define measurable acceptance criteria, test changes in a non-production\nenvironment, and retain an auditable record of configuration updates.\nExample scenario: a platform team deploys a customer-facing service across two availability zones. The team reviews network\nboundaries, service dependencies, access permissions, monitoring coverage, backup procedures, and rollback steps.\nReview questions: What failure mode is being controlled? Which metric would reveal the problem? Who owns the response? How\nwill the team verify that the corrective action worked?\nThis page is synthetic test material and does not describe a real organization or production configuration."
+                },
+                {
+                    "filename": "02_aws_networking_and_vpc_design.pdf",
+                    "page_number": 4,
+                    "rerank_score": 0.9471487998962402,
+                    "text": "Synthetic learning reference | Validate production settings with current official documentation\nPage 4\n04. Public and private subnets\nLearning objective: Explain public and private subnets, identify its design considerations, and describe how to validate it.\nPublic and private subnets is a core subject within aws networking and vpc design. A sound understanding begins with its\npurpose, the system boundary it applies to, and the operational outcome it is expected to support. Engineers should\ndistinguish the concept from the specific product or implementation used to deliver it.\nBefore implementation, record the requirements and assumptions. Identify the users or workloads, dependencies, data or\nrequest flow, security boundaries, scale expectations, availability needs, and recovery objectives. Requirements should be\nobservable and testable. Avoid relying on undocumented assumptions about defaults, network paths, permissions, or\nservice behavior.\nA practical workflow starts with discovery. Inspect the current configuration, identify ownership, collect relevant logs and\nmetrics, and map upstream and downstream dependencies. Separate control-plane configuration from runtime behavior.\nMake changes through a repeatable process, review the expected impact, and preserve a rollback path for shared or\nproduction environments.\nValidation should cover both successful operation and failure conditions. Test normal traffic, boundary conditions, access\nrestrictions, capacity limits, and recovery behavior. A command completing successfully does not prove that an end-to-end\nworkflow works. Verify from the perspective of the real client or workload and record evidence with timestamps and\nconfiguration context.\nThis topic is related to cidr notation and address planning because infrastructure components rarely operate in isolation. It\nmay also affect route tables through shared resources, dependencies, or operational procedures. Document these\nrelationships so that reviewers can understand the consequences of a change and identify teams or services that need to\nparticipate.\nFor troubleshooting, define the symptom precisely and establish a baseline. Compare a known-good path with the failing"
+                },
+                {
+                    "filename": "sample.pdf",
+                    "page_number": 42,
+                    "rerank_score": 0.7934213876724243,
+                    "text": "Synthetic Cloud Infrastructure Handbook\n\nScanned page demonstration - Page 42\n\nSubnetting\n\nA subnet is a smaller network carved from a larger CIDR range. A clear address\nplan avoids overlapping ranges, reserves capacity for growth, and separates\n\npublic services from private application and database tiers.\n\nOCR test: A private subnet should not accept unsolicited inbound internet\ntraffic.\n\nA NAT gateway can allow private instances to initiate outbound connections.\nPreserve the original PDF filename and one-based page number in metadata.\n\nThis synthetic content is created solely for software testing."
+                },
+                {
+                    "filename": "sample.pdf",
+                    "page_number": 12,
+                    "rerank_score": 0.23808978497982025,
+                    "text": "Synthetic Cloud Infrastructure and Operations Handbook\nChapter: Subnetting\nPage reference: 12.\nA subnet is a smaller network carved from a larger CIDR range. A clear address plan avoids overlapping ranges, reserves capacity\nfor growth, and separates public services from private application and database tiers.\nOperational guidance: document assumptions, define measurable acceptance criteria, test changes in a non-production\nenvironment, and retain an auditable record of configuration updates.\nExample scenario: a platform team deploys a customer-facing service across two availability zones. The team reviews network\nboundaries, service dependencies, access permissions, monitoring coverage, backup procedures, and rollback steps.\nReview questions: What failure mode is being controlled? Which metric would reveal the problem? Who owns the response? How\nwill the team verify that the corrective action worked?\nThis page is synthetic test material and does not describe a real organization or production configuration."
+                }
+            ],
+            "precision_at_5": 0.6,
+            "recall_at_5": 1.0,
+            "mrr": 1.0,
+            "citation_reference_accuracy": 0.6,
+            "retrieval_seconds": 0.30402449995744973,
+            "reranking_seconds": 3.4489687000168487,
+            "generation_seconds": 34.31729710003128,
+            "total_seconds": 38.07033079996472
+        },
+        {
+            "question": "What is the purpose of a NAT Gateway?",
+            "answer": "A NAT Gateway allows private instances to initiate outbound connections, enabling controlled outbound connectivity for private subnets. It does not, by itself, allow unsolicited inbound traffic to private subnets. The purpose of a NAT Gateway is to provide a controlled and secure way for private instances to communicate with the internet, while maintaining the security boundaries and operational outcomes expected in a private subnet.",
+            "retrieved_sources": [
+                {
+                    "filename": "02_aws_networking_and_vpc_design.pdf",
+                    "page_number": 7,
+                    "rerank_score": 0.9582555294036865,
+                    "text": "Synthetic learning reference | Validate production settings with current official documentation\nPage 7\n07. NAT gateways\nLearning objective: Explain nat gateways, identify its design considerations, and describe how to validate it.\nNAT gateways is a core subject within aws networking and vpc design. A sound understanding begins with its purpose, the\nsystem boundary it applies to, and the operational outcome it is expected to support. Engineers should distinguish the\nconcept from the specific product or implementation used to deliver it.\nBefore implementation, record the requirements and assumptions. Identify the users or workloads, dependencies, data or\nrequest flow, security boundaries, scale expectations, availability needs, and recovery objectives. Requirements should be\nobservable and testable. Avoid relying on undocumented assumptions about defaults, network paths, permissions, or\nservice behavior.\nA practical workflow starts with discovery. Inspect the current configuration, identify ownership, collect relevant logs and\nmetrics, and map upstream and downstream dependencies. Separate control-plane configuration from runtime behavior.\nMake changes through a repeatable process, review the expected impact, and preserve a rollback path for shared or\nproduction environments.\nValidation should cover both successful operation and failure conditions. Test normal traffic, boundary conditions, access\nrestrictions, capacity limits, and recovery behavior. A command completing successfully does not prove that an end-to-end\nworkflow works. Verify from the perspective of the real client or workload and record evidence with timestamps and\nconfiguration context.\nThis topic is related to internet gateways because infrastructure components rarely operate in isolation. It may also affect\nsecurity groups through shared resources, dependencies, or operational procedures. Document these relationships so that\nreviewers can understand the consequences of a change and identify teams or services that need to participate.\nFor troubleshooting, define the symptom precisely and establish a baseline. Compare a known-good path with the failing"
+                },
+                {
+                    "filename": "sample.pdf",
+                    "page_number": 43,
+                    "rerank_score": 0.8442285060882568,
+                    "text": "Synthetic Cloud Infrastructure Handbook\n\nScanned page demonstration - Page 43\n\nRouting\n\nRoute tables determine where packets travel. A public subnet commonly has a\ndefault route to an internet gateway, while a private subnet may use a NAT\n\ngateway for controlled outbound connectivity.\n\nOCR test: A private subnet should not accept unsolicited inbound internet\n\ntraffic.\nA NAT gateway can allow private instances to initiate outbound connections.\nPreserve the original PDF filename and one-based page number in metadata.\n\nThis synthetic content is created solely for software testing."
+                },
+                {
+                    "filename": "sample.pdf",
+                    "page_number": 33,
+                    "rerank_score": 0.15160514414310455,
+                    "text": "Synthetic Cloud Infrastructure and Operations Handbook\nChapter: Routing\nPage reference: 33.\nRoute tables determine where packets travel. A public subnet commonly has a default route to an internet gateway, while a private\nsubnet may use a NAT gateway for controlled outbound connectivity.\nOperational guidance: document assumptions, define measurable acceptance criteria, test changes in a non-production\nenvironment, and retain an auditable record of configuration updates.\nExample scenario: a platform team deploys a customer-facing service across two availability zones. The team reviews network\nboundaries, service dependencies, access permissions, monitoring coverage, backup procedures, and rollback steps.\nReview questions: What failure mode is being controlled? Which metric would reveal the problem? Who owns the response? How\nwill the team verify that the corrective action worked?\nThis page is synthetic test material and does not describe a real organization or production configuration."
+                },
+                {
+                    "filename": "05_networking_protocols_and_troubleshooting.pdf",
+                    "page_number": 16,
+                    "rerank_score": 0.0197455994784832,
+                    "text": "Synthetic learning reference | Validate production settings with current official documentation\nPage 16\n16. NAT and PAT\nLearning objective: Explain nat and pat, identify its design considerations, and describe how to validate it.\nNAT and PAT is a core subject within networking protocols and troubleshooting. A sound understanding begins with its\npurpose, the system boundary it applies to, and the operational outcome it is expected to support. Engineers should\ndistinguish the concept from the specific product or implementation used to deliver it.\nBefore implementation, record the requirements and assumptions. Identify the users or workloads, dependencies, data or\nrequest flow, security boundaries, scale expectations, availability needs, and recovery objectives. Requirements should be\nobservable and testable. Avoid relying on undocumented assumptions about defaults, network paths, permissions, or\nservice behavior.\nA practical workflow starts with discovery. Inspect the current configuration, identify ownership, collect relevant logs and\nmetrics, and map upstream and downstream dependencies. Separate control-plane configuration from runtime behavior.\nMake changes through a repeatable process, review the expected impact, and preserve a rollback path for shared or\nproduction environments.\nValidation should cover both successful operation and failure conditions. Test normal traffic, boundary conditions, access\nrestrictions, capacity limits, and recovery behavior. A command completing successfully does not prove that an end-to-end\nworkflow works. Verify from the perspective of the real client or workload and record evidence with timestamps and\nconfiguration context.\nThis topic is related to dhcp because infrastructure components rarely operate in isolation. It may also affect static routing\nthrough shared resources, dependencies, or operational procedures. Document these relationships so that reviewers can\nunderstand the consequences of a change and identify teams or services that need to participate.\nFor troubleshooting, define the symptom precisely and establish a baseline. Compare a known-good path with the failing\npath, then narrow the scope systematically. Check configuration, resource health, connectivity, identity and permissions,"
+                },
+                {
+                    "filename": "02_aws_networking_and_vpc_design.pdf",
+                    "page_number": 6,
+                    "rerank_score": 0.014473418705165386,
+                    "text": "Synthetic learning reference | Validate production settings with current official documentation\nPage 6\n06. Internet gateways\nLearning objective: Explain internet gateways, identify its design considerations, and describe how to validate it.\nInternet gateways is a core subject within aws networking and vpc design. A sound understanding begins with its purpose,\nthe system boundary it applies to, and the operational outcome it is expected to support. Engineers should distinguish the\nconcept from the specific product or implementation used to deliver it.\nBefore implementation, record the requirements and assumptions. Identify the users or workloads, dependencies, data or\nrequest flow, security boundaries, scale expectations, availability needs, and recovery objectives. Requirements should be\nobservable and testable. Avoid relying on undocumented assumptions about defaults, network paths, permissions, or\nservice behavior.\nA practical workflow starts with discovery. Inspect the current configuration, identify ownership, collect relevant logs and\nmetrics, and map upstream and downstream dependencies. Separate control-plane configuration from runtime behavior.\nMake changes through a repeatable process, review the expected impact, and preserve a rollback path for shared or\nproduction environments.\nValidation should cover both successful operation and failure conditions. Test normal traffic, boundary conditions, access\nrestrictions, capacity limits, and recovery behavior. A command completing successfully does not prove that an end-to-end\nworkflow works. Verify from the perspective of the real client or workload and record evidence with timestamps and\nconfiguration context.\nThis topic is related to route tables because infrastructure components rarely operate in isolation. It may also affect nat\ngateways through shared resources, dependencies, or operational procedures. Document these relationships so that\nreviewers can understand the consequences of a change and identify teams or services that need to participate.\nFor troubleshooting, define the symptom precisely and establish a baseline. Compare a known-good path with the failing"
+                }
+            ],
+            "precision_at_5": 0.4,
+            "recall_at_5": 0.6666666666666666,
+            "mrr": 0.5,
+            "citation_reference_accuracy": 0.4,
+            "retrieval_seconds": 0.549179199966602,
+            "reranking_seconds": 8.112201000039931,
+            "generation_seconds": 27.27129409997724,
+            "total_seconds": 35.93294810003135
+        }
+    ],
+    "evaluation_method": "Precision@5, Recall@5 and MRR use manually verified relevant PDF/page labels. Citation reference accuracy measures retrieved-source matching, not claim-level citation entailment."
+}

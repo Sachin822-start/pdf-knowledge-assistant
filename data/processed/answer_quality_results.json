@@ -1,0 +1,73 @@
+{
+    "summary": {
+        "questions_evaluated": 2,
+        "average_faithfulness_proxy": 0.5833333333333333,
+        "average_hallucination_proxy": 0.41666666666666663,
+        "average_citation_accuracy": null,
+        "similarity_threshold": 0.65
+    },
+    "individual_reviews": [
+        {
+            "question": "What is the difference between a public and private subnet?",
+            "faithfulness_proxy": 0.6666666666666666,
+            "hallucination_proxy": 0.3333333333333333,
+            "citation_evaluation": {
+                "total_citations": 0,
+                "correct_citations": 0,
+                "citation_accuracy": null,
+                "note": "No inline PDF/page citations found in the answer."
+            },
+            "sentence_analysis": [
+                {
+                    "sentence": "A public subnet is designed to allow unsolicited inbound internet traffic, while a private subnet is intended to control outbound traffic from private instances.",
+                    "best_similarity": 0.8132,
+                    "support_detected": true,
+                    "supporting_pdf": "sample.pdf",
+                    "supporting_page": 43
+                },
+                {
+                    "sentence": "A public subnet commonly has a default route to an internet gateway, whereas a private subnet uses a NAT gateway for controlled outbound connectivity.",
+                    "best_similarity": 0.8652,
+                    "support_detected": true,
+                    "supporting_pdf": "sample.pdf",
+                    "supporting_page": 43
+                },
+                {
+                    "sentence": "The key difference lies in the routing configuration and security permissions between the two types of subnets.",
+                    "best_similarity": 0.6481,
+                    "support_detected": false,
+                    "supporting_pdf": "sample.pdf",
+                    "supporting_page": 43
+                }
+            ]
+        },
+        {
+            "question": "What is the purpose of a NAT Gateway?",
+            "faithfulness_proxy": 0.5,
+            "hallucination_proxy": 0.5,
+            "citation_evaluation": {
+                "total_citations": 0,
+                "correct_citations": 0,
+                "citation_accuracy": null,
+                "note": "No inline PDF/page citations found in the answer."
+            },
+            "sentence_analysis": [
+                {
+                    "sentence": "A NAT Gateway allows private instances to initiate outbound connections, enabling controlled outbound connectivity for private subnets.",
+                    "best_similarity": 0.8261,
+                    "support_detected": true,
+                    "supporting_pdf": "sample.pdf",
+                    "supporting_page": 43
+                },
+                {
+                    "sentence": "It does not allow unsolicited inbound internet traffic, ensuring security boundaries and preventing unauthorized access.",
+                    "best_similarity": 0.6236,
+                    "support_detected": false,
+                    "supporting_pdf": "sample.pdf",
+                    "supporting_page": 43
+                }
+            ]
+        }
+    ],
+    "evaluation_method": "Automated sentence-to-context semantic similarity. Faithfulness and hallucination values are heuristic proxies, not verified entailment or factual correctness."
+}

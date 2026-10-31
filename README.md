@@ -5,6 +5,10 @@ A local Retrieval-Augmented Generation (RAG) application for asking questions ab
 
 > **Project status:** Development prototype. The current development corpus contains 10 PDFs with 50 pages each (500 pages total). It does **not** yet meet the challenge requirement of at least 10 PDFs with at least 200 pages each.
 
+## System Architecture
+
+![PDF Knowledge Assistant Architecture](docs/Architecture.png)
+
 ## Features
 
 - PDF text extraction using PyMuPDF.

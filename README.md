@@ -1,3 +1,4 @@
+ HEAD
 # PDF Knowledge Assistant
 
 A local Retrieval-Augmented Generation (RAG) application for asking questions about indexed PDF documents. It extracts text, applies OCR fallback to pages with insufficient native text, chunks the content, stores embeddings in ChromaDB, retrieves and reranks relevant passages, and generates answers with a locally hosted Ollama model.
@@ -251,3 +252,7 @@ Confirm the persistent path is `vectorstore\chroma_db`. Do not delete the databa
 ## License
 
 Before public distribution, document the licenses for the code, dependencies, model weights, and PDF dataset. These may have different license terms.
+ 
+# pdf-knowledge-assistant
+A local Retrieval-Augmented Generation (RAG) application for querying PDF documents using OCR, semantic search, ChromaDB, BGE embeddings, reranking, and Ollama-powered LLMs.  Copy description
+ 9bc3a528390778f81ad4665a646377c9bf86831d
